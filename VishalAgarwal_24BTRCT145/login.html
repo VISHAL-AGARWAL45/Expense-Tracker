@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #667eea 0%,
+                #6b73e6 25%,
+                #6f65d0 50%,
+                #724fb8 75%,
+                #764ba2 100%
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 40px;
+            width: 320px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input::placeholder {
+            color: #666;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: none;
+            background: #ffffff;
+            color: #667eea;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: #f0f0f0;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .error {
+            color: #ffcccc;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        .signup-link {
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        .signup-link a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 400px) {
+            .login-box {
+                width: 90%;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>Welcome Back 👋</h2>
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- ERROR MESSAGE -->
+    <div id="error-msg" class="error"></div>
+
+    <!-- SIGNUP LINK -->
+    <div class="signup-link">
+        <a href="signup.html">Create new account</a>
+    </div>
+
+    <div class="footer">
+        Expense Tracker Login
+    </div>
+</div>
+
+<!-- LOGIN JS -->
+<script src="login.js"></script>
+
+</body>
+</html>

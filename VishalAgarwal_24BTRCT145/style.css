@@ -1,0 +1,229 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    color: #333;
+
+    /* Smooth gradient */
+    background: linear-gradient(
+        135deg,
+        #667eea 0%,
+        #6b73e6 25%,
+        #6f65d0 50%,
+        #724fb8 75%,
+        #764ba2 100%
+    );
+
+    background-attachment: fixed;
+    position: relative;
+
+    /* Better rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 18px;
+}
+
+/* Noise overlay (removes gradient banding) */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+/* Container */
+.container {
+    width: min(95%, 1200px);
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 28px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* Button */
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #5a67d8;
+    transform: scale(1.05);
+}
+
+/* Card */
+.card {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th {
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* Action buttons */
+.delete-btn {
+    background: red;
+    margin-left: 5px;
+}
+
+.edit-btn {
+    background: orange;
+}
+
+/* Total */
+h2 {
+    text-align: right;
+    color: #333;
+    font-size: 20px;
+}
+
+/* Filter */
+.filter {
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Smooth animation */
+tr {
+    transition: all 0.3s ease;
+}
+
+tr:hover {
+    transform: scale(1.01);
+}
+
+/* ============================= */
+/* 📱 MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+
+    .filter {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+/* ============================= */
+/* 📱 SMALL DEVICES */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 18px;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
+
+/* ============================= */
+/* 💻 BIG SCREENS */
+/* ============================= */
+
+@media (min-width: 1400px) {
+
+    .container {
+        width: min(90%, 1400px);
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    input, select {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 14px 22px;
+        font-size: 16px;
+    }
+
+    th, td {
+        font-size: 16px;
+    }
+}
